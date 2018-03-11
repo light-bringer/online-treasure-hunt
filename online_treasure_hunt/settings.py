@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -114,6 +114,9 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_root")
+
+
 MIDDLEWARE_CLASSES += (
     # 'social.apps.django_app.middleware.SocialAuthExceptionMiddleware',
 )
@@ -130,6 +133,7 @@ AUTHENTICATION_BACKENDS = (
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Absolute path to the media directory
+
 
 LOGIN_REDIRECT_URL = '/'
 

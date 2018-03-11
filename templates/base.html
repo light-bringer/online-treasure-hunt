@@ -8,7 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="{% static 'img/favicon.png' %}">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
 
 
     <title>Online Treasure Hunt</title>
@@ -20,9 +20,11 @@
     <link href="{% static 'css/justified-nav.css' %}" rel="stylesheet">
     
     <link href="{% static 'css/bootstrap-social.css' %}" rel="stylesheet">
+
     <link href="{% static 'css/style_base.css' %}" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css">
+
     <link href="https://fonts.googleapis.com/css?family=Capriola|Creepster|Droid+Sans|Merriweather|Montserrat" rel="stylesheet">
     
   </head>
@@ -30,16 +32,18 @@
   <body class="bodypad">
 
     <div class="container">
-    
-    <div class="row">
+
 
     {% block content %}
     {% endblock %}
-    </div>
+
 
       <!-- Site footer -->
       <footer class="footer">
-        <p>&copy; 2017 GNU/Linux users group, NIT Durgapur</p>
+        <p>&copy; 2018. <strong>Developed by:</strong> GNU/Linux users group, NIT Durgapur</p>
+        <img src="{% static 'img/glug_logo.png'%}" alt="glug_logo">
+        <img src="/static/img/avskr_logo.png" alt="avskr_logo">
+
       </footer>
 
     </div> <!-- /container -->
